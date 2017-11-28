@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: gomicroservices
+  labels:
+    language: go
+    env: test
+spec:
+  containers:
+  - image: gomicroservices:1.0.1-alpine
+    name: gomicroservices
+    ports:
+    - containerPort: 8080
+      protocol: TCP
